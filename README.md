@@ -1,6 +1,6 @@
 <h1 align="center">Selamat datang di Staycation! 👋</h1>
 
-### 🤔 Apa itu Staycation?
+## Apa itu Staycation?
 
 Web Staycation yang dibuat oleh <a href="https://github.com/adhiariyadi"> Adhi Ariyadi </a>. **Staycation adalah Website untuk seseorang agar dapat berlibur tanpa memikirkan untuk mencari tempat tinggal yang dekat dengan tampat dari tampat liburan tersebut. Staycation aplikasi untuk mencari rumah, hotel, dan apartement melalui website dengan mudah.**
 
