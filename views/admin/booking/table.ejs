@@ -1,0 +1,53 @@
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">
+      DataTables Example
+    </h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table
+        class="table table-bordered"
+        id="dataTable"
+        width="100%"
+        cellspacing="0"
+      >
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Invoice</th>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Name Member</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let i = 1; booking.forEach(data => { %>
+          <tr>
+            <td><%= i++; %></td>
+            <td>#<%= data.invoice %></td>
+            <td>
+              <%= data.bookingStartDate.toLocaleString().split(',')[0] %> - <%=
+              data.bookingEndDate.toLocaleString().split(',')[0] %>
+            </td>
+            <td><%= data.itemId.title %></td>
+            <td>
+              <%= data.memberId.firstName %> <%= data.memberId.lastName %>
+            </td>
+            <td><%= data.payments.status %></td>
+            <td>
+              <a
+                href="/admin/booking/<%= data.id %>"
+                class="btn btn-success btn-sm btn-circle"
+                ><i class="fas fa-eye"></i
+              ></a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

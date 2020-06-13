@@ -1,0 +1,55 @@
+<!-- Header -->
+<%- include('../../templates/header.ejs') %>
+<!-- End of Header -->
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+  <!-- Sidebar -->
+  <%- include('../../templates/sidebar.ejs') %>
+  <!-- End of Sidebar -->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+      <!-- Navbar -->
+      <%- include('../../templates/navbar.ejs') %>
+      <!-- End of Navbar -->
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Detail Booking</h1>
+        <!-- End Heading -->
+
+        <!-- Alert -->
+        <%- include('../../templates/message.ejs') %>
+        <!-- End Alert -->
+
+        <!-- DataTales Example -->
+        <%- include('table-detail.ejs') %>
+        <!-- End DataTales Example -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <%- include('../../templates/footer.ejs') %>
+    <!-- End of Footer -->
+  </div>
+  <!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Modal-->
+<!-- End Modal -->
+
+<!-- Script -->
+<%- include('../../templates/script.ejs') %>
+<!-- End of Script -->
