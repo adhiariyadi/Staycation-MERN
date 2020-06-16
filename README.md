@@ -41,7 +41,7 @@ git clone https://github.com/adhiariyadi/Staycation-Backend-ExpressJS.git
 cd Staycation-Backend-ExpressJS
 ```
 
-2. **Install `<a href="https://www.mongodb.com/try/download/community">MonggoDB</a>`**
+2. **Install <a href="https://www.mongodb.com/try/download/community">MonggoDB</a>**
 
 3. **Instalasi website**
 
