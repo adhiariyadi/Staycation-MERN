@@ -15,7 +15,11 @@ module.exports = {
       const mostPicked = await Item.find()
         .select("_id title country city price unit imageId")
         .limit(5)
-        .populate({ path: "imageId", select: "_id imageUrl" });
+        .populate({
+          path: "imageId",
+          select: "_id imageUrl",
+          perDocumentLimit: 1,
+        });
       const category = await Category.find()
         .select("_id name")
         .limit(3)
@@ -56,8 +60,8 @@ module.exports = {
 
       res.status(200).json({
         hero: {
-          treasures: treasure.length,
           trevelers: treveler.length,
+          treasures: treasure.length,
           cities: city.length,
         },
         mostPicked,
