@@ -41,14 +41,16 @@ git clone https://github.com/adhiariyadi/Staycation-Backend-ExpressJS.git
 cd Staycation-Backend-ExpressJS
 ```
 
-2. **Instalasi website**
+2. **Install `<a href="https://www.mongodb.com/try/download/community">MonggoDB</a>`**
+
+3. **Instalasi website**
 
 ```bash
 npm install
 node seeder.js
 ```
 
-3. **Jalankan website**
+4. **Jalankan website**
 
 ```bash
 npm run dev
