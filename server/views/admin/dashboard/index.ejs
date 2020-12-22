@@ -1,0 +1,120 @@
+<!-- Header -->
+<%- include('../../templates/header.ejs') %>
+<!-- End of Header -->
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+  <!-- Sidebar -->
+  <%- include('../../templates/sidebar.ejs') %>
+  <!-- End of Sidebar -->
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+      <!-- Navbar -->
+      <%- include('../../templates/navbar.ejs') %>
+      <!-- End of Navbar -->
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+
+        <!-- Content Row -->
+        <div class="row">
+          <!-- Member Card Example -->
+          <div class="col-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                    >
+                      Member
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <%= member.length %>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-users fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Card Example -->
+          <div class="col-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                    >
+                      Order
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <%= booking.length %>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-gem fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item Card Example -->
+          <div class="col-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div
+                      class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                    >
+                      Item
+                    </div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                      <%= item.length %>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-hotel fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <%- include('../../templates/footer.ejs') %>
+    <!-- End of Footer -->
+  </div>
+  <!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Modal-->
+<!-- End Modal -->
+
+<!-- Script -->
+<%- include('../../templates/script.ejs') %>
+<!-- End of Script -->

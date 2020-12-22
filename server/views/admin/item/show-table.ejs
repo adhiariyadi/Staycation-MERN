@@ -1,0 +1,70 @@
+<div
+  class="tab-pane fade show active"
+  id="show-item"
+  role="tabpanel"
+  aria-labelledby="show-tab"
+>
+  <div class="card shadow mb-4 mt-2">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table
+          class="table table-bordered"
+          id="dataTable"
+          width="100%"
+          cellspacing="0"
+        >
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Country</th>
+              <th>City</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% let i = 1; item.forEach(data => { %>
+            <tr>
+              <td><%= i++; %></td>
+              <td><%= data.title %></td>
+              <td>$ <%= data.price %></td>
+              <td><%= data.country %></td>
+              <td><%= data.city %></td>
+              <td>
+                <form
+                  action="/admin/item/<%= data.id %>/delete?_method=DELETE"
+                  method="POST"
+                >
+                  <a
+                    href="/admin/item/show/<%= data.id %>"
+                    class="btn btn-info btn-sm btn-circle"
+                    ><i class="fas fa-image"></i
+                  ></a>
+                  <a
+                    href="/admin/item/<%= data.id %>"
+                    class="btn btn-warning btn-sm btn-circle"
+                    ><i class="fas fa-edit"></i
+                  ></a>
+                  <button
+                    type="submit"
+                    class="btn btn-danger btn-sm btn-circle"
+                    onclick="return confirm('Yakin');"
+                  >
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <a
+                    href="/admin/item/detail/<%= data.id %>"
+                    class="btn btn-success btn-sm btn-circle"
+                    ><i class="fas fa-plus"></i
+                  ></a>
+                </form>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

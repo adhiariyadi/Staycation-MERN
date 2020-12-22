@@ -1,0 +1,79 @@
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
+      data-toggle="modal"
+      data-target="#add-modal"
+    >
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table
+        class="table table-bordered"
+        id="dataTable"
+        width="100%"
+        cellspacing="0"
+      >
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name Bank</th>
+            <th>Nomor Rekening</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let i = 1; bank.forEach(data => { %>
+          <tr>
+            <td><%= i++; %></td>
+            <td><%= data.nameBank %></td>
+            <td><%= data.nomorRekening %></td>
+            <td><%= data.name %></td>
+            <% if (data.imageUrl) { %>
+            <td>
+              <img
+                src="http://localhost:4000/<%= data.imageUrl %>"
+                alt=""
+                width="70"
+              />
+            </td>
+            <% } else { %>
+            <td></td>
+            <% } %>
+            <td>
+              <form
+                action="/admin/bank/<%= data.id %>?_method=DELETE"
+                method="POST"
+              >
+                <a
+                  href="javascript:void()"
+                  type="button"
+                  class="btn btn-warning btn-sm btn-circle btn-update"
+                  data-id="<%= data.id %>"
+                  data-name-bank="<%= data.nameBank %>"
+                  data-nomor-rekening="<%= data.nomorRekening %>"
+                  data-name="<%= data.name %>"
+                  ><i class="fas fa-edit"></i
+                ></a>
+                <button
+                  type="submit"
+                  class="btn btn-danger btn-sm btn-circle"
+                  onclick="return confirm('Yakin');"
+                >
+                  <i class="fas fa-trash"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
