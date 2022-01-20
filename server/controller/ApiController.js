@@ -54,7 +54,7 @@ module.exports = {
         rate: 4.55,
         content:
           "What a great trip with my family and I should try again next time soon ...",
-        familyName: "Angga",
+        familyName: "Bayu",
         familyOccupation: "Product Designer",
       };
 

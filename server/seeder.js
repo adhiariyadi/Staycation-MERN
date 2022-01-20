@@ -1837,7 +1837,7 @@ var data = [
           proofPayment: "images/buktibayar.jpeg",
           bankFrom: "Bank Central Asia",
           status: "Proses",
-          accountHolder: "angga",
+          accountHolder: "Adhi Ariyadi",
         },
       },
     ],
